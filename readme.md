@@ -1,31 +1,36 @@
 # readme generator
 
-Node app for generating readmes from command line input.
+Node app for generating readmes from command line input. As a developer, it is important to thoroughly document your work.
 
-## readme guide
+## readme guidelines
 
 [How to create a Professional README](./readme-guide.md)
 
 ## directives
 
-GIVEN a command-line application that accepts user input
-WHEN I am prompted for information about my application repository
-THEN a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions
+This is a command-line application that accepts user input by prompting for information about the application repository.
+Information is added to each of the various sections of the README while it is being generated.
+A high-quality, professional README.md file is written as a result.
+*Sections* of content are entitled as follows:
 
-WHEN I enter my project title
-THEN this is displayed as the title of the README
-WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
+- Description
+  - Project title is displayed as the #title of the README, followed by an overview.
+  - One's GitHub username is added to the Questions section with a link to their GitHub profile.
+- Table of Contents
+  - This contains links to corresponding sections of the README.
+- Installation
+  - Installation info includes commands used to get the application working, denoted with `code blocks`
+- Usage
+  - give more detailed info about how to use
+  - Add your screenshots here.
+- License
+  - Licensing is imperative and obtained from a list of options. A badge is also displayed for it.
+- Contributing
+  - Give credit where it is due. Make sure to mark down contributions. Shout out those tuts.
+- Tests
+  - Testing should be developed for any application.
+- Questions
+  - Instructions on how to reach out with additional questions to the section of the README entitled Questions with.
 
-THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
+If your project has a lot of features, consider adding a "Features" section.
 
-WHEN I choose a license for my application from a list of options
-THEN a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
-WHEN I enter my GitHub username
-
-THEN this is added to the section of the README entitled Questions, with a link to my GitHub profile
-WHEN I enter my email address
-
-THEN this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions
-
-WHEN I click on the links in the Table of Contents
-THEN I am taken to the corresponding section of the README
