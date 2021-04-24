@@ -32,7 +32,7 @@ If your README is very long, add a table of contents to make it easy for users t
 What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
 
 
-## Usage 
+## Usage
 
 Provide instructions and examples for use. Include screenshots as needed.
 
