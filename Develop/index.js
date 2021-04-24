@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
+const { generateMarkdown } = require('./utils/generateMarkdown')
 
 const promptUser = () => {
     return inquirer.prompt([
@@ -55,6 +56,12 @@ const promptUser = () => {
                     return false;
                 }
             }
+        },
+        {
+            type: 'list',
+            name: 'license',
+            message: 'Which license would you like to use?',
+            choices: ['MIT']
         },
         {
             type: 'confirm',
@@ -127,11 +134,19 @@ const promptUser = () => {
 }
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    let markdownData = generateMarkdown(data);
+    console.log(markdownData);
+    fs.writeFile(fileName, markdownData, () => {});
+}
 
 // TODO: Create a function to initialize app
 function init() {
-    promptUser();
+    promptUser()
+        .then(readmeData => {
+            writeToFile('./dist/README.md', readmeData)
+        })
+        .catch(err => console.log(err));;
 }
 
 // Function call to initialize app
