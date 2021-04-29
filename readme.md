@@ -20,6 +20,7 @@ Here are the list of commands used to get the application working:
 
 ```bash
 npm i inquirer
+node index.js
 ```
 
 ## Usage
