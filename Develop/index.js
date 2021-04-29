@@ -47,7 +47,7 @@ const promptUser = () => {
       {
           type: 'input',
           name: 'installation',
-          message: 'What commands are needed to get the app working?',
+          message: 'What commands are needed to get the app working? (use commas)',
           validate: installationInput => {
               if  (installationInput) {
                   return true;
@@ -60,7 +60,7 @@ const promptUser = () => {
       {
           type: 'input',
           name: 'usage',
-          message: 'More detailed info about how to use:',
+          message: 'More detailed info about basic functionality:',
           validate: usageInput => {
               if  (usageInput) {
                   return true;

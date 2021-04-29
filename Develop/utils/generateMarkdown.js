@@ -160,7 +160,8 @@ ${tests || 'no testing procedures/coverage.'}
 
 ## Questions
 
-${questions}
+email: ${questions}
+[Github profile](https://github.com/${username}).
 
 If your project has a lot of features, consider adding a "Features" section.
 `;
