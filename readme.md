@@ -19,7 +19,7 @@ First of all, install [node](https://nodejs.org/en/).
 Here are the list of commands used to get the application working:
 
 ```bash
-cd Develop; npm i
+npm i
 node index.js
 ```
 
