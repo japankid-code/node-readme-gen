@@ -1,6 +1,7 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
+  // a badge for that license is added near the top of the README!!
   return `https://img.shields.io/badge/license-${license}-brightgreen`
 }
 
@@ -67,7 +68,7 @@ For more information, please refer to <https://unlicense.org>`
     case 'ISC': {
       return `ISC License
 
-Copyright (c) [year], [fullname]
+Copyright (c) ${new Date().getFullYear()} ${`Jake Rankin`}
 
 Permission to use, copy, modify, and/or distribute this software for any
 purpose with or without fee is hereby granted, provided that the above
@@ -87,6 +88,7 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.`
   // TODO: Create a function to generate markdown for README
   function generateMarkdown(data) {
   const { 
+  name,
   title,
   description,
   installation,
@@ -101,6 +103,8 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.`
   return `# ${title}
 
 ${description}
+
+![${license} badge](${renderLicenseBadge(license)})
 
 ## Table of Contents
 
@@ -121,21 +125,19 @@ ${installation}
 ## Usage
 
 ${usage}
-${screenshots || `Don't forget to add images! 
+${screenshots || `Don't forget to add images!
 
 ![placeholder](https://via.placeholder.com/150)`}
 
 ## License
 
-${renderLicenseSection(license)}
+${renderLicenseSection(license) || ''}
 
 [link to ${license}](${renderLicenseLink(license)})
 
-![${license} badge](${renderLicenseBadge(license)})
-
 ## Contributing
 
-${contributions || 'nothing to [shout out](URLs)'}
+${contributions || 'nothing to shout out.'}
 
 ## Tests
 
