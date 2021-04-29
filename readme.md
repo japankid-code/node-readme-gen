@@ -1,41 +1,8 @@
-# readme generator
+# node-readme-gen
 
-Node app for generating readmes from command line input. As a developer, it is important to thoroughly document your work.
+CLI app for generating readmes
 
-## readme guidelines
-
-[How to create a Professional README](./readme-guide.md)
-
-## directives
-
-This is a command-line application that accepts user input by prompting for information about the application repository.
-Information is added to each of the various sections of the README while it is being generated.
-A high-quality, professional README.md file is written as a result.
-*Sections* of content are entitled as follows:
-
-- Description
-  - Project title is displayed as the #title of the README, followed by an overview.
-  - One's GitHub username is added to the Questions section with a link to their GitHub profile.
-- Table of Contents
-  - This contains links to corresponding sections of the README.
-- Installation
-  - Installation info includes commands used to get the application working, denoted with `code blocks`
-- Usage
-  - give more detailed info about how to use
-  - Add your screenshots here.
-- License
-  - Licensing is imperative and obtained from a list of options. A badge is also displayed for it.
-- Contributing
-  - Give credit where it is due. Make sure to mark down contributions. Shout out those tuts.
-- Tests
-  - Testing should be developed for any application.
-- Questions
-  - Instructions on how to reach out with additional questions to the section of the README entitled Questions with.
-
-## Description
-
-Project title is displayed as the #title of the README, followed by an overview.
-One's GitHub username is added to the Questions section with a link to their GitHub profile.
+![MIT badge](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge) ![language badge](https://img.shields.io/github/languages/top/japankid-code/node-readme-gen?style=for-the-badge)
 
 ## Table of Contents
 
@@ -48,22 +15,25 @@ One's GitHub username is added to the Questions section with a link to their Git
 
 ## Installation
 
-Installation info includes commands used to get the application working, denoted with `code blocks`
+First of all, install [node](https://nodejs.org/en/).
+Here are the list of commands used to get the application working:
 
 ```bash
-npm install inquirer
+npm i inquirer
 ```
 
 ## Usage
 
-give more detailed info about how to use
-Add your screenshots here.
+answer prompts, generate markdown
+Don't forget to add images!
+
+![app screenshot](app-preview.png)
 
 ## License
 
 MIT License
 
-Copyright (c) [year] [fullname]
+Copyright (c) 2021 jake rankin
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -83,16 +53,18 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
+[link to MIT](https://choosealicense.com/licenses/mit/)
+
 ## Contributing
 
-Give credit where it is due. Make sure to mark down contributions. Shout out those tuts.
+nothing to shout out.
 
 ## Tests
 
-Testing should be developed for any application.
+no testing procedures/coverage.
 
 ## Questions
 
-Instructions on how to reach out with additional questions to the Questiojns section.
+japankid.jake@gmail.com
 
 If your project has a lot of features, consider adding a "Features" section.

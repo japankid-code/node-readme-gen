@@ -8,7 +8,7 @@ const promptUser = () => {
       {
         type: 'input',
         name: 'name',
-        message: 'What is your name?',
+        message: 'What is your full name?',
         validate: titleInput => {
             if  (titleInput) {
                 return true;
@@ -20,13 +20,13 @@ const promptUser = () => {
       },
       {
           type: 'input',
-          name: 'title',
-          message: 'What is the title of your application?',
+          name: 'repo',
+          message: 'Please provide github link to repo:',
           validate: titleInput => {
               if  (titleInput) {
                   return true;
               } else {
-                  console.log('Please enter the title !!');
+                  console.log('Please enter the link !!');
                   return false;
               }
           },

@@ -2,7 +2,7 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   // a badge for that license is added near the top of the README!!
-  return `https://img.shields.io/badge/license-${license}-brightgreen`
+  return `![${license} badge](https://img.shields.io/badge/license-${license}-blue?style=for-the-badge)`
 }
 
 // TODO: Create a function that returns the license link
@@ -12,14 +12,25 @@ function renderLicenseLink(license) {
   return `https://choosealicense.com/licenses/${lowerLicense}/`
 }
 
+function renderInstallSteps(installation) {
+  // install text input as 'npm install inquirer, npm install jest'
+  let installList = installation.split(', ');
+  // ['npm install inquirer', 'npm install jest']
+  return `\`\`\`bash\n${installList.join('\n')}\n\`\`\``
+}
+
+function renderLanguageBadge(username, title) {
+  return `![language badge](https://img.shields.io/github/languages/top/${username}/${title}?style=for-the-badge)`
+}
+
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {
+function renderLicenseSection(license, name) {
   switch (license) {
     case 'MIT': {
       return `MIT License
 
-Copyright (c) ${new Date().getFullYear()} ${`Jake Rankin`}
+Copyright (c) ${new Date().getFullYear()} ${name}
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -68,7 +79,7 @@ For more information, please refer to <https://unlicense.org>`
     case 'ISC': {
       return `ISC License
 
-Copyright (c) ${new Date().getFullYear()} ${`Jake Rankin`}
+Copyright (c) ${new Date().getFullYear()} ${name}
 
 Permission to use, copy, modify, and/or distribute this software for any
 purpose with or without fee is hereby granted, provided that the above
@@ -83,13 +94,13 @@ ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.`
     }
   }
-  }
+}
 
   // TODO: Create a function to generate markdown for README
-  function generateMarkdown(data) {
+function generateMarkdown(data) {
   const { 
   name,
-  title,
+  repo,
   description,
   installation,
   usage,
@@ -100,11 +111,15 @@ OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.`
   questions,
   } = data;
 
+  let repoSplit = repo.split('/');
+  let title = repoSplit[repoSplit.length - 1];
+  let username = repoSplit[repoSplit.length - 2];
+
   return `# ${title}
 
 ${description}
 
-![${license} badge](${renderLicenseBadge(license)})
+${renderLicenseBadge(license)} ${renderLanguageBadge(username, title)}
 
 ## Table of Contents
 
@@ -120,7 +135,7 @@ ${description}
 First of all, install [node](https://nodejs.org/en/).
 Here are the list of commands used to get the application working:
 
-${installation}
+${renderInstallSteps(installation)}
 
 ## Usage
 
@@ -131,7 +146,7 @@ ${screenshots || `Don't forget to add images!
 
 ## License
 
-${renderLicenseSection(license) || ''}
+${renderLicenseSection(license, name) || ''}
 
 [link to ${license}](${renderLicenseLink(license)})
 

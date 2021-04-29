@@ -1,6 +1,8 @@
 # node-readme-gen
 
-cli app for creating readmes
+CLI app for generating readmes
+
+![MIT badge](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge) ![language badge](https://img.shields.io/github/languages/top/japankid-code/node-readme-gen?style=for-the-badge)
 
 ## Table of Contents
 
@@ -16,12 +18,15 @@ cli app for creating readmes
 First of all, install [node](https://nodejs.org/en/).
 Here are the list of commands used to get the application working:
 
-npm install inquirer
+```bash
+npm i inquirer
+npm i jest
+```
 
 ## Usage
 
-respond to prompt, get readme :)
-Don't forget to add images! 
+answer prompts, generate markdown
+Don't forget to add images!
 
 ![placeholder](https://via.placeholder.com/150)
 
@@ -29,7 +34,7 @@ Don't forget to add images!
 
 MIT License
 
-Copyright (c) 2021 Jake Rankin
+Copyright (c) 2021 jake rankin
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -49,13 +54,11 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-[MIT licensing info.](https://choosealicense.com/licenses/mit/)
-
-![MIT badge.](https://img.shields.io/badge/license-MIT-brightgreen)
+[link to MIT](https://choosealicense.com/licenses/mit/)
 
 ## Contributing
 
-nothing to [shout out](URLs)
+nothing to shout out.
 
 ## Tests
 
