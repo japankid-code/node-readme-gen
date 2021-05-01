@@ -1,6 +1,6 @@
 # node-readme-gen
 
-CLI app for generating readmes
+CLI for generating quality readmes.
 
 ![MIT badge](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge) ![language badge](https://img.shields.io/github/languages/top/japankid-code/node-readme-gen?style=for-the-badge)
 
@@ -19,13 +19,13 @@ First of all, install [node](https://nodejs.org/en/).
 Here are the list of commands used to get the application working:
 
 ```bash
-npm i inquirer
-npm i jest
+npm i
+node index
 ```
 
 ## Usage
 
-answer prompts, generate markdown
+input info about the app, recieve a markdown file. :)
 Don't forget to add images!
 
 ![placeholder](https://via.placeholder.com/150)
@@ -34,7 +34,7 @@ Don't forget to add images!
 
 MIT License
 
-Copyright (c) 2021 jake rankin
+Copyright (c) 2021 Jake Rankin
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -66,6 +66,7 @@ no testing procedures/coverage.
 
 ## Questions
 
-japankid.jake@gmail.com
+email: japankid.jake@gmail.com
+[Github profile](https://github.com/japankid-code).
 
 If your project has a lot of features, consider adding a "Features" section.

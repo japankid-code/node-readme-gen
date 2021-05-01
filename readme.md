@@ -23,12 +23,11 @@ npm i
 node index.js
 ```
 
+For a walkthrough on setting up, here is a [youtube link](https://youtu.be/U8k8y7Ca_eA)
+
 ## Usage
 
-answer prompts, generate markdown
-Don't forget to add images!
-
-![app screenshot](app-preview.png)
+answer prompts, generate markdown :)
 
 ## License
 
