@@ -150,7 +150,6 @@ const promptUser = () => {
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     let markdownData = generateMarkdown(data);
-    console.log(markdownData);
     fs.writeFile(fileName, markdownData, () => {});
 }
 

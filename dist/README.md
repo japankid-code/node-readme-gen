@@ -1,8 +1,8 @@
-# notesy
+# team-manager
 
-Backend built by me, front end was starter code.. Link to repo is [here](https://github.com/japankid-code/notesy)
+CLI for database management. Link to repo is [here](https://github.com/japankid-code/team-manager)
 
-![Unlicense badge](https://img.shields.io/badge/license-Unlicense-blue?style=for-the-badge) ![language badge](https://img.shields.io/github/languages/top/japankid-code/notesy?style=for-the-badge)
+![Unlicense badge](https://img.shields.io/badge/license-Unlicense-blue?style=for-the-badge) ![language badge](https://img.shields.io/github/languages/top/japankid-code/team-manager?style=for-the-badge)
 
 ## Table of Contents
 
@@ -19,13 +19,13 @@ First of all, install [node](https://nodejs.org/en/).
 Here are the list of commands used to get the application working:
 
 ```bash
-none
+npm i
 ```
 
 ## Usage
 
-user can add, check and delete notes
-![depiction of deployed app](notesy-preview.png)
+uses MySQL and inquirer
+Don't forget to add images!
 
 ## License
 

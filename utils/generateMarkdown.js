@@ -22,11 +22,14 @@ function renderInstallSteps(installation) {
 }
 
 function addScreenshots(screenshots) {
+  if (screenshots === undefined) {
+    return false;
+  }
   let screenieList = screenshots.split(', ');
   let screenies = screenieList.map(screenie => {
     return (`![depiction of deployed app](${screenie})`)
   }).join('');
-  return screenies
+  return screenies;
 }
 
 // TODO: Create a function that returns the license section of README
