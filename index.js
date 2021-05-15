@@ -1,7 +1,8 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-const { generateMarkdown } = require('./utils/generateMarkdown')
+const { generateMarkdown } = require('./utils/generateMarkdown');
+const path = require('path');
 
 const promptUser = () => {
     return inquirer.prompt([
@@ -155,11 +156,13 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    promptUser()
-        .then(readmeData => {
-            writeToFile('./dist/README.md', readmeData)
-        })
-        .catch(err => console.log(err));;
+  promptUser()
+    .then(readmeData => {
+        writeToFile('./dist/README.md', readmeData)
+        console.log(`Markdown written to ${path.join(__dirname, './dist/README.md')}`)
+    })
+    .catch(err => console.log(err));;
+  
 }
 
 // Function call to initialize app

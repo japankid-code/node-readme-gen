@@ -1,12 +1,14 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// returns a license badge based on which license is passed in
 function renderLicenseBadge(license) {
   // a badge for that license is added near the top of the README!!
   return `![${license} badge](https://img.shields.io/badge/license-${license}-blue?style=for-the-badge)`
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+function renderLanguageBadge(username, title) {
+  return `![language badge](https://img.shields.io/github/languages/top/${username}/${title}?style=for-the-badge)`
+}
+
+// returns the license link
 function renderLicenseLink(license) {
   lowerLicense = license.toLowerCase();
   return `https://choosealicense.com/licenses/${lowerLicense}/`
@@ -19,8 +21,12 @@ function renderInstallSteps(installation) {
   return `\`\`\`bash\n${installList.join('\n')}\n\`\`\``
 }
 
-function renderLanguageBadge(username, title) {
-  return `![language badge](https://img.shields.io/github/languages/top/${username}/${title}?style=for-the-badge)`
+function addScreenshots(screenshots) {
+  let screenieList = screenshots.split(', ');
+  let screenies = screenieList.map(screenie => {
+    return (`![depiction of deployed app](${screenie})`)
+  }).join('');
+  return screenies
 }
 
 // TODO: Create a function that returns the license section of README
@@ -117,7 +123,7 @@ function generateMarkdown(data) {
 
   return `# ${title}
 
-${description}
+${description}. Link to repo is [here](${repo})
 
 ${renderLicenseBadge(license)} ${renderLanguageBadge(username, title)}
 
@@ -140,9 +146,7 @@ ${renderInstallSteps(installation)}
 ## Usage
 
 ${usage}
-${screenshots || `Don't forget to add images!
-
-![placeholder](https://via.placeholder.com/150)`}
+${addScreenshots(screenshots) || `Don't forget to add images!`}
 
 ## License
 
